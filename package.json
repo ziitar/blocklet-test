@@ -4,11 +4,13 @@
   "scripts": {
     "dev": "craco start",
     "build": "craco build",
+    "test": "craco test",
+    "test:e2e": "cypress open",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext .mjs,.js,.jsx,.ts,.tsx",
     "start": "npm run dev",
     "clean": "rm -rf .blocklet",
-    "bundle": "npm run clean && PUBLIC_URL='/.blocklet/proxy/z8iZiXxDxfqdKVVbgZmkmPmEDfVTDSTBeAhUu' npm run build && blocklet bundle --zip --create-release",
+    "bundle": "PUBLIC_URL='/.blocklet/proxy/{did}' npm run build",
     "deploy": "npm run bundle && blocklet deploy .blocklet/bundle",
     "upload": "npm run bundle && blocklet upload .blocklet/release/blocklet.json",
     "prepare": "husky install"
@@ -48,6 +50,8 @@
   "devDependencies": {
     "@arcblock/eslint-config": "^0.1.8",
     "babel-eslint": "^10.1.0",
+    "create-test-server": "^3.0.1",
+    "cypress": "^9.6.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -58,8 +62,10 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-unicorn": "^34.0.1",
     "husky": "^7.0.4",
+    "jest": "^28.1.0",
     "less": "^4.1.2",
     "lint-staged": "^12.4.1",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "react-test-renderer": "^18.1.0"
   }
 }

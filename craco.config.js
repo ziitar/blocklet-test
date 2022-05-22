@@ -10,8 +10,14 @@ module.exports = {
     },
   },
   eslint: {
-    enable: true /* (default value) */,
+    enable: true,
     mode: 'file',
     configure: eslint,
+  },
+  jest: {
+    babel: {
+      addPresets: true,
+      addPlugins: true,
+    },
   },
 };

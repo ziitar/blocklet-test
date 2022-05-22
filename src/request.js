@@ -52,8 +52,6 @@ const request = (cfg) => {
   return service(formatUrl, {
     ...rest,
     method: 'get',
-  }).catch(() => {
-    return undefined;
   });
 };
 

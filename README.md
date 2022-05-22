@@ -26,6 +26,20 @@ This blocklet is a static project, which means this is a frontend application. I
 - README.md - A guide for this blocklet
 - version - Version file
 
+## Test
+
+DOM Test use cypress, please run
+
+```sh
+  $ npm run test:e2e
+```
+
+utils function and request use jest, please run
+
+```sh
+  $ npm run test
+```
+
 ## Development
 
 1. Make sure you have [@blocklet/cli](https://www.npmjs.com/package/@blocklet/cli) installed
